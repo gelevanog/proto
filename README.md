@@ -1,2 +1,3 @@
 # proto
-Proto - jQuery based Admin page
+Proto - Simple jQuery based Admin page
+[Documentation](http://gelevanog.com/proto/documentation/)
