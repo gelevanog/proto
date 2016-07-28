@@ -1,0 +1,45 @@
+.pagination {
+    > li {
+        > a, > span {
+            text-decoration: none;
+            color: @primary-color;
+            margin-left: 1px;
+            border-color: transparent;
+            min-width: 34px;
+            text-align: center;
+            background-color: transparent;
+        }
+        &:first-child {
+            > a, > span {
+                margin-left: 0;
+                border-radius: 50% !important;
+            }
+        }
+        &:last-child {
+            > a, > span {
+                border-radius: 50% !important;
+            }
+        }
+    }
+    > li > a,
+    > li > span {
+        &:hover, &:focus {
+            border-color: transparent;
+            border-radius: 50% !important;
+        }
+    }
+    > .active > a,
+    > .active > span {
+        &, &:hover, &:focus {
+            background-color: @primary-color;
+            border-color: transparent;
+            border-radius: 50% !important;
+        }
+    }
+    > .disabled {
+        > span, > span:hover, > span:focus, > a, > a:hover, > a:focus {
+            border-color: transparent;
+            border-radius: 50% !important;
+        }
+    }
+}

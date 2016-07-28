@@ -1,0 +1,56 @@
+th {
+    text-align: left;
+}
+.table {
+    background-color: @white;
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                border-top: 1px solid @table-border-color;
+            }
+        }
+    }
+    > thead > tr > th {
+        border-bottom: 1px solid @thead-border-color;
+    }
+    > tbody + tbody {
+        border-top: 1px solid @table-border-color;
+    }
+    .box-shadow(0px 1px 1px rgba(0, 0, 0, 0.33));
+    &.none-box-shadow {
+        .box-shadow(none);
+    }
+}
+.table-bordered {
+    border: 1px solid @table-border-color;
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                border: 1px solid @table-border-color;
+            }
+        }
+    }
+    > thead > tr {
+        > th,
+        > td {
+            border-bottom-width: 1px;
+        }
+    }
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f5f5f5;
+}
+.table-row-variant(success;
+lighten(@success-color, 50%));
+.table-row-variant(info;
+lighten(@info-color, 40%));
+.table-row-variant(warning;
+lighten(@warning-color, 30%));
+.table-row-variant(danger;
+lighten(@danger-color, 30%));

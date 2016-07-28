@@ -1,0 +1,164 @@
+.btn {
+    border-radius: 3px;
+    &:active, &.active {
+        .box-shadow(none);
+    }
+    &-wide {
+        min-width: 120px;
+    }
+    &-squared {
+        border-radius: 0 !important;
+    }
+    &-rounded {
+        padding-left: 7px;
+        padding-right: 7px;
+        border-radius: 30px;
+        min-width: 34px;
+        &.btn-xs {
+            padding-left: 4px;
+            padding-right: 4px;
+            min-width: 22px;
+        }
+        &.btn-sm {
+            min-width: 30px;
+        }
+        &.btn-lg {
+            min-width: 46px;
+        }
+    }
+}
+
+.btn-white {
+    .button-variant(@default-color;
+    @white;
+    @white);
+}
+
+.btn-default {
+    .button-variant(@default-color;
+    @white;
+    @default-color);
+}
+
+.btn-primary {
+    .button-variant(@white;
+    @primary-color;
+    @primary-color);
+}
+
+.btn-success {
+    .button-variant(@white;
+    @success-color;
+    @success-color);
+}
+
+.btn-info {
+    .button-variant(@white;
+    @info-color;
+    @info-color);
+}
+
+.btn-danger {
+    .button-variant(@white;
+    @danger-color;
+    @danger-color);
+}
+
+.btn-warning {
+    .button-variant(@white;
+    @warning-color;
+    @warning-color);
+}
+
+.btn-inverse {
+    .button-variant(@white;
+    @inverse;
+    @inverse);
+}
+
+.btn-pink {
+    .button-variant(@white;
+    @pink;
+    @pink);
+}
+.btn-red {
+    .button-variant(@white;
+    @red;
+    @red);
+}
+.btn-purple {
+    .button-variant(@white;
+    @purple;
+    @purple);
+}
+.btn-deep-purple {
+    .button-variant(@white;
+    @deep-purple;
+    @deep-purple);
+}
+.btn-indigo {
+    .button-variant(@white;
+    @indigo;
+    @indigo);
+}
+.btn-blue {
+    .button-variant(@white;
+    @blue;
+    @blue);
+}
+.btn-green {
+    .button-variant(@white;
+    @green;
+    @green);
+}
+.btn-cyan {
+    .button-variant(@white;
+    @cyan;
+    @cyan);
+}
+.btn-teal {
+    .button-variant(@white;
+    @teal;
+    @teal);
+}
+.btn-lime {
+    .button-variant(@text-color;
+    @lime;
+    @lime);
+}
+.btn-yellow {
+    .button-variant(@text-color;
+    @yellow;
+    @yellow);
+}
+.btn-orange {
+    .button-variant(@white;
+    @orange;
+    @orange);
+}
+.btn-deep-orange {
+    .button-variant(@white;
+    @deep-orange;
+    @deep-orange);
+}
+.btn-brown {
+    .button-variant(@white;
+    @brown;
+    @brown);
+}
+.btn-blue-gray {
+    .button-variant(@white;
+    @blue-gray;
+    @blue-gray);
+}
+
+.btn-gray {
+    .button-variant(@text-color;
+    @block-border-color;
+    @block-border-color);
+}
+
+.btn [class^="ti-"],
+.btn [class*=" ti-"] {
+    vertical-align: middle;
+}

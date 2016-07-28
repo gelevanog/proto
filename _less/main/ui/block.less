@@ -1,0 +1,487 @@
+.block {
+    background-color: @block-bg-color;
+    margin: 0 0 20px;
+    .box-shadow(0 1px 0px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24););
+    .transition(all 280ms cubic-bezier(.4, 0, .2, 1));
+    &.no-shadow {
+        .box-shadow(none);
+    }
+    &.hover-shadow {
+        &:hover {
+            .box-shadow(0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+            );
+        }
+    }    
+    a& {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    &.block-fullscreen {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1041;
+        margin-bottom: 0;
+        overflow-y: auto;
+        .block-content {
+            border-width: 0;
+        }
+        .block-header {
+            border-width: 0;
+            border-bottom-width: 1px;
+        }
+    }
+    small {
+        color: inherit !important;
+    }
+}
+
+.block-header {
+    border: 1px solid @block-content-color;
+    color: @text-color;
+    background-color: @block-header-bg-color;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        display: inline-block;
+        font-size: 16px;
+        margin: 0;
+        padding: 10px 15px 7px;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+    &.white-bg {
+        border-bottom-width: 0;
+    }    
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.block-content {
+    border: 1px solid @block-content-color;
+    padding: 15px 15px 1px;
+    &.white-bg {
+        border-color: transparent;
+    }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.block-header ~ .block-content {
+    border-top-width: 0;
+}
+
+.block-footer {
+    border: 1px solid darken(@block-border-color, 10%);
+    background-color: darken(@block-border-color, 10%);
+    border-top-width: 0;
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .footer-text {
+        margin: 0;
+        padding: 11px 15px 9px;
+        line-height: 1.4;
+    }
+}
+
+.block-options {
+    margin: 0 6px;
+    line-height: 37px;
+    min-height: 40px;
+    .btn-sm {
+        line-height: 26px;
+        height: 30px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.block-icon {
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    display: inline-block;
+    font-size: 32px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sup-in-block {
+    font-size: .4em;
+    top: -1.5em;
+    left: .4em;
+}
+
+
+/*==========  COLORFULL BACKGROUNDS  ==========*/
+
+.block-variant(@bg-color;
+@text-color) {
+    background-color: @bg-color;
+    color: @text-color;
+    border-color: @bg-color;
+}
+
+.inverse-bg {
+    .block-variant(@inverse, @white);
+}
+
+.gray-bg {
+    .block-variant(@block-border-color, @text-color);
+}
+
+.primary-bg {
+    .block-variant(@primary-color, @white);
+}
+
+.success-bg {
+    .block-variant(@success-color, @white);
+}
+
+.info-bg {
+    .block-variant(@info-color, @white);
+}
+
+.danger-bg {
+    .block-variant(@danger-color, @white);
+}
+
+.warning-bg {
+    .block-variant(@warning-color, @white);
+}
+
+.white-bg {
+    .block-variant(@white, @text-color);
+}
+
+.pink-bg {
+    .block-variant(@pink, @white);
+}
+
+.red-bg {
+    .block-variant(@red, @white);
+}
+
+.purple-bg {
+    .block-variant(@purple, @white);
+}
+
+.deep-purple-bg {
+    .block-variant(@deep-purple, @white);
+}
+
+.indigo-bg {
+    .block-variant(@indigo, @white);
+}
+
+.blue-bg {
+    .block-variant(@blue, @white);
+}
+
+.cyan-bg {
+    .block-variant(@cyan, @white);
+}
+
+.teal-bg {
+    .block-variant(@teal, @white);
+}
+
+.green-bg {
+    .block-variant(@green, @white);
+}
+
+.lime-bg {
+    .block-variant(@lime, @text-color);
+}
+
+.orange-bg {
+    .block-variant(@orange, @white);
+}
+
+.deep-orange-bg {
+    .block-variant(@deep-orange, @white);
+}
+
+.brown-bg {
+    .block-variant(@brown, @white);
+}
+
+.yellow-bg {
+    .block-variant(@yellow, @text-color);
+}
+
+.blue-gray-bg {
+    .block-variant(@blue-gray, @white);
+}
+
+
+/*==========  COLORFULL INNER SHADOWS  ==========*/
+
+.inverse-inshadow {
+    .box-shadow(inset 0 0 0 2px @inverse);
+}
+.gray-inshadow {
+    .box-shadow(inset 0 0 0 2px @block-border-color);
+}
+.white-inshadow {
+    .box-shadow(inset 0 0 0 2px @white);
+}
+
+.primary-inshadow {
+    .box-shadow(inset 0 0 0 2px @primary-color);
+}
+
+.success-inshadow {
+    .box-shadow(inset 0 0 0 2px @success-color);
+}
+
+.info-inshadow {
+    .box-shadow(inset 0 0 0 2px @info-color);
+}
+
+.warning-inshadow {
+    .box-shadow(inset 0 0 0 2px @warning-color);
+}
+
+.danger-inshadow {
+    .box-shadow(inset 0 0 0 2px @danger-color);
+}
+
+.red-inshadow {
+    .box-shadow(inset 0 0 0 2px @red);
+}
+
+.pink-inshadow {
+    .box-shadow(inset 0 0 0 2px @pink);
+}
+
+.purple-inshadow {
+    .box-shadow(inset 0 0 0 2px @purple);
+}
+
+.deep-purple-inshadow {
+    .box-shadow(inset 0 0 0 2px @deep-purple);
+}
+
+.indigo-inshadow {
+    .box-shadow(inset 0 0 0 2px @indigo);
+}
+
+.cyan-inshadow {
+    .box-shadow(inset 0 0 0 2px @cyan);
+}
+
+.teal-inshadow {
+    .box-shadow(inset 0 0 0 2px @teal);
+}
+
+.green-inshadow {
+    .box-shadow(inset 0 0 0 2px @green);
+}
+
+.lime-inshadow {
+    .box-shadow(inset 0 0 0 2px @lime);
+}
+
+.yellow-inshadow {
+    .box-shadow(inset 0 0 0 2px @yellow);
+}
+
+.orange-inshadow {
+    .box-shadow(inset 0 0 0 2px @orange);
+}
+
+.deep-orange-inshadow {
+    .box-shadow(inset 0 0 0 2px @deep-orange);
+}
+
+.brown-inshadow {
+    .box-shadow(inset 0 0 0 2px @brown);
+}
+
+.blue-gray-inshadow {
+    .box-shadow(inset 0 0 0 2px @blue-gray);
+}
+
+
+/*==========  COLORFULL INNER SHADOWS (THIN VARIANT)  ==========*/
+
+.inverse-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @inverse);
+}
+.gray-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @block-border-color);
+}
+.white-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @white);
+}
+
+.primary-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @primary-color);
+}
+
+.success-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @success-color);
+}
+
+.info-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @info-color);
+}
+
+.warning-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @warning-color);
+}
+
+.danger-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @danger-color);
+}
+
+.red-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @red);
+}
+
+.purple-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @purple);
+}
+
+.deep-purple-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @deep-purple);
+}
+
+.indigo-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @indigo);
+}
+
+.cyan-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @cyan);
+}
+
+.teal-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @teal);
+}
+
+.green-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @green);
+}
+
+.lime-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @lime);
+}
+
+.yellow-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @yellow);
+}
+
+.orange-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @orange);
+}
+
+.deep-orange-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @deep-orange);
+}
+
+.brown-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @brown);
+}
+
+.blue-gray-thin-inshadow {
+    .box-shadow(inset 0 0 0 1px @blue-gray);
+}
+
+
+/*==========  COLORFULL BORDERS  ==========*/
+
+.inverse-border {
+    border-color: @inverse;
+}
+
+.white-border {
+    border-color: @white;
+}
+
+.primary-border {
+    border-color: @primary-color;
+}
+
+.success-border {
+    border-color: @success-color;
+}
+
+.info-border {
+    border-color: @info-color;
+}
+
+.warning-border {
+    border-color: @warning-color;
+}
+
+.danger-border {
+    border-color: @danger-color;
+}
+
+.red-border {
+    border-color: @red;
+}
+
+.purple-border {
+    border-color: @purple;
+}
+
+.deep-purple-border {
+    border-color: @deep-purple;
+}
+
+.indigo-border {
+    border-color: @indigo;
+}
+
+.cyan-border {
+    border-color: @cyan;
+}
+
+.teal-border {
+    border-color: @teal;
+}
+
+.green-border {
+    border-color: @green;
+}
+
+.lime-border {
+    border-color: @lime;
+}
+
+.yellow-border {
+    border-color: @yellow;
+}
+
+.orange-border {
+    border-color: @orange;
+}
+
+.deep-orange-border {
+    border-color: @deep-orange;
+}
+
+.brown-border {
+    border-color: @brown;
+}
+
+.blue-gray-border {
+    border-color: @blue-gray;
+}

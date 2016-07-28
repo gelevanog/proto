@@ -1,0 +1,58 @@
+.profile-timeline {
+	position: relative;
+	&:before {
+		content: "";
+		height: 100%;
+		position: absolute;
+		width: 1px;
+		background: #B5B5B5;
+		left: 25px;
+	}
+    .timeline-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        > li {
+            position: relative;
+            padding-left: 65px;
+            margin-bottom: 15px;
+        }
+    }
+    .timeline-badge {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        text-align: center;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        i {
+            font-size: 16px;
+            line-height: 50px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+    .timeline-content {
+        padding: 15px 15px 0;
+        border: 1px solid @body-bg;
+        border-radius: 2px;
+        .box-shadow(0px 1px 1px rgba(0, 0, 0, 0.33));
+        position: relative;
+        background: @body-bg;
+    }
+    .timeline-arrow {
+        top: 24px;
+        left: -16px;
+        margin-top: -8px;
+        border-color: rgba(0, 0, 0, 0);
+        border-right-color: @body-bg;
+        border-left-width: 0;
+        border-width: 8px;
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;        
+    }
+}
