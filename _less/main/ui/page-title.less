@@ -1,0 +1,29 @@
+.page-title {
+    margin: -15px -15px 15px;
+    padding: 15px;
+    background-color: @page-title-bg-color;
+    border-bottom: 1px solid @page-title-border-color;
+    .main-title {
+        margin: 0;
+        font-size: 25px;
+        font-weight: 100;
+    }
+    .main-description {
+        margin: 10px 0 0;
+        font-size: 16px;
+        color: @text-color;
+        font-weight: 300;
+    }
+    .breadcrumb {
+        margin: 0;
+        text-align: right;
+        padding: 7px 0 0;
+        font-size: 12px;
+    }
+    @media (max-width: 767px) {
+        text-align: center;
+        .breadcrumb {
+            text-align: center;
+        }
+    }
+}

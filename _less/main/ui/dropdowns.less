@@ -1,0 +1,18 @@
+.dropdown-menu {
+    .box-shadow(0 1px 2px rgba(0, 0, 0, .175));    
+    // Hover/Focus state
+    > li > a {
+        &:hover, &:focus {
+            text-decoration: none;
+            color: lighten(@black, 10%);
+            background-color: @body-bg;
+        }
+    }
+    // Active state
+    > .active > a {
+        &, &:hover, &:focus {
+            color: @white;
+            background-color: @primary-color;
+        }
+    }   
+}

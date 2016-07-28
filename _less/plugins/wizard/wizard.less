@@ -1,0 +1,163 @@
+.swMain {
+    overflow: hidden;
+    .anchor {
+        width: 100%;
+        display: table;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: table-cell;
+            float: none;
+            width: auto;
+            a {
+                &, &:hover, &:active {
+                    color: @white;
+                    display: block;
+                    padding: 10px;
+                    background-color: @main-nav-bg-color;
+                    text-decoration: none;
+                    //.box-shadow(inset -1px 0 0 lighten(@main-nav-bg-color, 15%));
+                    // .stepNumber {
+                    //     color: @text-color;
+                    // }
+                }
+                &.selected {
+                    color: @white;
+                    background-color: lighten(@main-nav-bg-color, 15%);
+                    .stepNumber {
+                        background-color: @primary-color;
+                        // color: @white;
+                        background-color: @white;
+                        color: @text-color;
+                    }
+                }
+                &.done {
+                    color: @success-color;
+                    .stepNumber {
+                        background-color: @success-color;
+                        color: @white;
+                    }
+                }
+            }
+        }
+        .stepNumber {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: normal;
+            margin-bottom: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 3px;
+            color: @white;
+            background-color: lighten(@main-nav-bg-color, 15%);
+            text-align: center;
+            margin-right: 6px;
+        }
+        .stepDesc {
+            display: inline-block;
+        }
+    }
+    .stepContainer {
+        background-color: @white;
+        padding: 10px 15px 20px;
+        border-left: 1px solid @block-border-color;
+        border-right: 1px solid @block-border-color;
+        height: auto !important;
+    }
+    .actionBar {
+        background-color: @block-border-color;
+        padding: 10px 15px;
+        border-left: 1px solid @block-border-color;
+        border-right: 1px solid @block-border-color;
+        border-bottom: 1px solid @block-border-color;
+        position: relative;
+        &:after {
+            clear: both;
+            content: "";
+            display: table;
+        }
+        .msgBox {
+            position: absolute;
+            bottom: 100%;
+            background-color: @danger-color;
+            width: 100%;
+            left: 0;
+            color: @white;
+            text-align: center;
+            .content {
+                display: inline-block;
+            }
+            .close {
+                float: none;
+                display: inline-block;
+                font-size: inherit;
+                margin-left: 10px;
+                color: @white;
+                opacity: 1;
+                font-weight: 400;
+                text-transform: lowercase;
+                font-family: monospace;
+            }
+        }
+        .msgBox,
+        .loader {
+            display: none;
+        }
+        > a {
+            float: right;
+            display: inline-block;
+            margin-bottom: 0; // For input.btn          
+            text-align: center;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 6px 12px;
+            color: @white;
+            background-color: @success-color;
+            border-color: @success-color;
+            margin: 0 2px;
+            border-radius: 3px;
+            min-width: 80px;
+            .user-select(none);
+            &, &:active, &.active {
+                &:focus, &.focus {
+                    .tab-focus();
+                }
+            }
+            &:hover,
+            &:focus,
+            &.focus {
+                color: @white;
+                text-decoration: none;
+            }
+            &:active,
+            &.active {
+                outline: 0;
+                background-image: none;
+            }
+            &.buttonDisabled {
+                background-color: lighten(@main-nav-bg-color, 15%);
+                border-color: lighten(@main-nav-bg-color, 15%);
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .swMain {
+        .anchor {
+            display: block;
+            li {
+                display: block;
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+}

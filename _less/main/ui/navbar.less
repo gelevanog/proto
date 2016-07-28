@@ -1,0 +1,45 @@
+.navbar-default:not(.main-header) {
+    border-color: lighten(@inverse, 40%);
+    background-color: lighten(@inverse, 55%);
+    .navbar-brand {
+        color: @text-color;
+    }
+    .navbar-nav {
+        > .active {
+            > a {
+                &,
+                &:hover,
+                &:focus {
+                    background-color: lighten(@inverse, 50%);
+                    color: @inverse;
+                }
+            }
+        }
+        > li > a {
+            color: @inverse;
+        }
+        > .open > a {
+            &,
+            &:hover,
+            &:focus {
+                background-color: lighten(@inverse, 50%);
+                color: @inverse;
+            }
+        }
+    }
+}
+
+.navbar-default {
+    .navbar-nav > {
+        .open {
+            > a {
+                &,
+                &:active,
+                &:hover,
+                &:focus {
+                    background-color: @white;
+                }
+            }
+        }
+    }
+}

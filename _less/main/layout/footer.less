@@ -1,0 +1,17 @@
+/*==========  FOOTER  ==========*/
+.main-footer {
+	padding: 5px 15px;
+	&.fixed-bottom {
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	    position: absolute;
+	    transform: translate3d(0,0,0);
+	    z-index: 1088;
+	    margin-left: @sidebar-width;
+	    @media (max-width: 991px) {
+	    	margin-left: 0;
+	    }
+	}		
+}
+/*==========  END FOOTER  ==========*/
